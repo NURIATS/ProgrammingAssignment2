@@ -25,7 +25,7 @@ makeCacheMatrix <- function(x = matrix()) {
 
 cacheSolve <- function(x, ...) {
   s <- x$getinverse()
-       if(!is.null(s)) {
+       if(!is.null(s)) {  #if the inverse has already been calculated we will obtain a message and the mean will be get from the cache
                message("getting cached data")
                return(s)
         }
@@ -39,6 +39,6 @@ cacheSolve <- function(x, ...) {
 
 
 
-# Try an example with: x<-matrix(c(1, 3, 2, 4),nrow=2,ncol=2)
+
 
 
